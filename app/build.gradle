@@ -21,5 +21,6 @@ android {
 
 dependencies {
   compile 'com.android.support:appcompat-v7:25.0.0'
-  compile project(':local')
+  //compile project(':local')
+  compile 'com.github.anry200.lib:local:1.0.0@aar'
 }

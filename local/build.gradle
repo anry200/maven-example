@@ -1,4 +1,15 @@
+buildscript {
+  repositories {
+    jcenter()
+  }
+
+  dependencies {
+    classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
+  }
+}
+
 apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
 
 android {
   compileSdkVersion 25
@@ -23,3 +34,7 @@ android {
 dependencies {
   //empty
 }
+
+//Maven library settings
+group = 'com.github.anry200.lib'
+version = '1.0.0'
