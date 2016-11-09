@@ -136,17 +136,15 @@ nexus {
 add to **~/.gradle/gradle.properties**
 ```
 nexusUsername=android_lib_nexus
-nexusPassword=secure123
+nexusPassword=secure123### publish your library to Nexus
+```
+./gradlew module_name:uploadArchives
 ```
 
-## 3. publish your library to Nexus
+## 3. Main project setup
 
-./gradlew module_name:uploadArchives
-
-##3. Main project setup
-
-project/build.gradle
-
+**project/build.gradle**
+```
 allprojects {
   repositories {
     jcenter()
@@ -154,3 +152,7 @@ allprojects {
     maven { url "http://nexus.anry200.github.com/repository/android_lib/"} //used for internal libraries.
   }
 }
+```
+
+```
+
