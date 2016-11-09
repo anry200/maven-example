@@ -1,1 +1,1 @@
-include ':app', ':local'
+include ':app', ':local', ':nexus'
