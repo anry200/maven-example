@@ -26,4 +26,5 @@ dependencies {
 
   //nexus
   compile project(':nexus')
+  //compile 'com.github.anry200.lib:nexus:1.0.0@aar'
 }

@@ -1,4 +1,16 @@
+buildscript {
+  repositories {
+    jcenter()
+  }
+
+  dependencies {
+    classpath 'com.bmuschko:gradle-nexus-plugin:2.3.1'
+  }
+}
+
 apply plugin: 'com.android.library'
+apply plugin: 'com.bmuschko.nexus'
+
 
 android {
   compileSdkVersion 25
@@ -21,10 +33,21 @@ android {
 }
 
 dependencies {
-  compile fileTree(dir: 'libs', include: ['*.jar'])
-  androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-    exclude group: 'com.android.support', module: 'support-annotations'
-  })
-  compile 'com.android.support:appcompat-v7:25.0.0'
-  testCompile 'junit:junit:4.12'
+  //empty
+}
+
+//Maven library settings
+group = 'com.github.anry200.lib'
+version = '1.0.0'
+
+extraArchive {
+  sources = false
+  tests = false
+  javadoc = false
+}
+
+nexus {
+  sign = false
+  repositoryUrl = 'http://nexus.anry200.github.com/repository/android_lib/'
+  snapshotRepositoryUrl = 'http://nexus.anry200.github.com/repository/android_lib/'
 }

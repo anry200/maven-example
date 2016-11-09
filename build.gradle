@@ -16,6 +16,7 @@ allprojects {
   repositories {
     jcenter()
     mavenLocal()
+    maven { url "http://nexus.anry200.github.com/repository/android_lib/"} //used for internal libraries.
   }
 }
 
